@@ -5,7 +5,8 @@
 </template>
 
 <style lang="scss">
-@import './assets/css/reset.scss';
-@import './assets/css/com.scss';
-@import './assets/css/project.scss';
+@import 'bootstrap/scss/bootstrap.scss';
+@import '~@/assets/css/reset.scss';
+@import '~@/assets/css/com.scss';
+@import '~@/assets/css/project.scss';
 </style>
