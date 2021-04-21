@@ -34,7 +34,7 @@ service.interceptors.request.use(config => {
     //     config.headers.Authorization = `Bearer ${Cookies.get('token')}`
     // }
     // })
-    if (!config.baseURL)  config.baseURL = '/api/public'
+    if (!config.baseURL)  config.baseURL = '/api/public/api/v1'
     return config
 },
 err => {

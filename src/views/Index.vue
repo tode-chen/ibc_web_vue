@@ -90,7 +90,7 @@
                                         <div class="t-cell__label">佣金</div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <span>$0.01</span>/股，最低<span>$0.35</span>/笔
+                                        <span>0.0035美元</span>/股，最低<span>0.35美元</span>/笔
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -100,7 +100,7 @@
                                         </div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <span>0</span>美元
+                                        无平台使用费，代收外部机构费（如交易所费、监管费等）
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -126,8 +126,8 @@
                                         <div class="t-cell__label">佣金</div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        交易金额<span>*0.08%</span>,
-                                        最低<span>18</span>港币
+                                        交易金额<span>0.08%</span>,
+                                        最低<span>18港币</span>/笔
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -137,7 +137,7 @@
                                         </div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <span>0</span>港币
+                                        无平台使用费
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -162,12 +162,13 @@
                                         <div class="t-cell__label">佣金</div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <p>
+                                        <span>0.85美元</span>/张合约
+                                        <!-- <p>
                                             北美地区：<span>0.85</span>美元/张(单边)
                                         </p>
                                         <p>
                                             非北美地区：<span>1.05</span>美元/张(单边)<br /><span>0.85</span>欧元/张(单边)
-                                        </p>
+                                        </p> -->
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -177,7 +178,7 @@
                                         </div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <span>0</span>费用
+                                        无平台使用费，代收外部机构费（如交易所费、监管费等）
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +193,8 @@
                                         <div class="t-cell__label">佣金</div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <span>$0.65</span>/张期权,最低<span>$1.00</span>/笔
+                                        <span>0.65美元</span>/张(期权费>0.1美元)<br />
+                                        最低每笔定单<span>1.00美元</span>
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -202,7 +204,7 @@
                                         </div>
                                     </div>
                                     <div class="t-cell__bd">
-                                        <span>0</span>美元
+                                        无平台使用费，代收外部机构费（如交易所费、监管费等）
                                     </div>
                                 </div>
                                 <div class="t-cell ">
@@ -507,7 +509,7 @@ export default {
                             }
 
                             .t-cell__bd {
-                                padding-left: 10px;
+                                padding-left: 20px;
                                 box-sizing: border-box;
                                 text-align: right;
                                 font-size: 16px;

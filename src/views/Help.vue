@@ -110,7 +110,7 @@ export default {
     methods: {
         getHelpList () {
             this.$ajax
-                .get('/api/v1/home/getHelpList', {
+                .get('/home/getHelpList', {
                     params: {
                         limit: 1,
                         page: 1,
@@ -124,7 +124,7 @@ export default {
         },
         getCategoryList () {
             this.$ajax
-                .get('/api/v1/home/getCategoryList', {
+                .get('/home/getCategoryList', {
                     params: {
                         limit: 1,
                         page: 1,
@@ -149,7 +149,7 @@ export default {
         getArticleDetail () {
             if (!this.nav_aid) return
             this.$ajax
-                .get('/api/v1/home/getArticleDetail', {
+                .get('/home/getArticleDetail', {
                     params: {
                         id: this.nav_aid,
                     },
