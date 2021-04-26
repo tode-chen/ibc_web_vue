@@ -8,8 +8,8 @@
             <swiper-slide>
                 <div class="swiper-item-wrap swiper-1 t-scr-wrap">
                     <div class="banner-wrap p-wrap">
-                        <div class="banner-ad1 t-active"></div>
-                        <div class="banner-cols-wrap">
+                        <div class="banner-ad1 t-active" @click="$router.push({path:'/help'})"></div>
+                        <!-- <div class="banner-cols-wrap">
                             <div class="banner-cols-title">热门服务</div>
                             <ul>
                                 <li class="t-active">
@@ -40,13 +40,16 @@
                                     <div class="banner-col-btn_arrow"></div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </swiper-slide>
             <!-- swiper-2 -->
             <swiper-slide>
                 <div class="swiper-item-wrap swiper-2 t-scr-wrap">
+                    <div class="banner-wrap p-wrap">
+                        <div class="banner-ad2 t-active" @click="$router.push({path:'/help'})"></div>
+                    </div>
                 </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -305,7 +308,7 @@ export default {
             height: 738px;
             .banner-ad1 {
                 position: absolute;
-                top: 138px;
+                top: 208px;
                 right: 0;
                 left: 0;
                 z-index: 200;
@@ -314,6 +317,19 @@ export default {
                 background: url("~@/assets/images/banner-ad-1.png") no-repeat
                     center;
                 background-size: 471px 231px;
+                cursor: pointer;
+            }
+            .banner-ad2 {
+                position: absolute;
+                top: 208px;
+                right: 0;
+                left: 0;
+                z-index: 200;
+                width: 100%;
+                height: 256px;
+                background: url("~@/assets/images/banner-ad-2.png") no-repeat
+                    center;
+                background-size: 1013px 256px;
                 cursor: pointer;
             }
             .banner-cols-wrap {

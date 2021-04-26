@@ -15,34 +15,41 @@
     box-sizing: border-box;
     height: 76px;
     line-height: 76px;
+
     .header-logo {
         width: 165px;
         height: 26px;
         background: url('~@/assets/images/logo.png') no-repeat;
         background-size: cover;
     }
+
     .header-nav {
         flex: 1;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         margin-left: 26px;
+
         li {
             font-size: 12px;
             color: #fff;
             font-weight: 700;
             cursor: pointer;
+
             &:not(:first-child) {
                 margin-left: 20px;
             }
+
             &.act {
                 color: $t-color-primary;
             }
+
             &:active {
                 opacity: 0.5;
             }
         }
     }
+
     .header-panel {
         display: flex;
         justify-content: flex-start;
@@ -51,25 +58,36 @@
         height: 24px;
         line-height: 24px;
         font-size: 12px;
+        color: #f2f2f2;
+
+        .language {
+            position: relative;
+            padding: 0 20px;
+
+            span {
+                cursor: pointer;
+                padding: 0 5px;
+            }
+        }
+
         .wx-follow {
             position: relative;
             padding: 0 20px 0 calc(24px + 10px);
             box-sizing: border-box;
-            background: url('~@/assets/images/icon-wechat.png') no-repeat
-                left center;
+            background: url('~@/assets/images/icon-wechat.png') no-repeat left center;
             background-size: 24px 24px;
-            color: #f2f2f2;
-            &:after {
-                content: ' ';
-                display: block;
-                position: absolute;
-                top: 4px;
-                right: 0;
-                width: 1px;
-                height: 16px;
-                background: #f2f2f2;
-            }
+            // &:after {
+            //     content: ' ';
+            //     display: block;
+            //     position: absolute;
+            //     top: 4px;
+            //     right: 0;
+            //     width: 1px;
+            //     height: 16px;
+            //     background: #f2f2f2;
+            // }
         }
+
         .contact-phone {
             margin-left: 20px;
             padding-left: 36px;
@@ -78,9 +96,7 @@
             width: 170px;
             height: 24px;
             color: #fff;
-            background: $t-color-primary
-                url('~@/assets/images/icon-mobile.png') no-repeat 10px
-                center;
+            background: $t-color-primary url('~@/assets/images/icon-mobile.png') no-repeat 10px center;
             background-size: 16px 16px;
         }
     }

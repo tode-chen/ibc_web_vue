@@ -14,8 +14,16 @@
             </ul>
             <div class="header-panel">
                 <div class="wx-follow">微信关注</div>
-                <div class="contact-phone">联系电话 400-888-888</div>
+                <div class="language">
+                    <span @click="onLanguage('cn')">简</span>
+                    <span>|</span>
+                    <span @click="onLanguage('en')">EN</span>
+                </div>
             </div>
+            <!-- <div class="header-panel">
+                <div class="wx-follow">微信关注</div>
+                <div class="contact-phone">联系电话 400-888-888</div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -34,6 +42,13 @@ export default {
             if (pathName === 'index') pathName = '/'
             this.$router.push(pathName)
         },
+        onLanguage (type) {
+            if (type === 'cn') {
+                alert('为保护投资者权益，中国大陆居民根据中华人民共和国法律法规要求，需通过合法合规渠道投资境外股票市场');
+            } else if (type === 'en') {
+                alert('正在开发中');
+            }
+        }
     },
 }
 </script>
