@@ -83,3 +83,21 @@
         }
     }
 }
+
+.k-btn {
+    border-radius: 5px;
+    padding: 0 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    &:active {
+        opacity: 0.5;
+    }
+    &.more {
+        border: 1px solid #d81222;
+        color: #d81222;
+        font-weight: bold;
+    }
+}

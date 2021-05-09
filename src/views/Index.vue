@@ -3,12 +3,14 @@
         <div class="t-scr-wrap bg-black">
             <headerbar col="index" />
         </div>
-        <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper ref="mySwiper"
+                :options="swiperOptions">
             <!-- swiper-1 -->
             <swiper-slide>
                 <div class="swiper-item-wrap swiper-1 t-scr-wrap">
                     <div class="banner-wrap p-wrap">
-                        <div class="banner-ad1 t-active" @click="$router.push({path:'/help'})"></div>
+                        <div class="banner-ad1 t-active"
+                             @click="$router.push({path:'/help'})"></div>
                         <!-- <div class="banner-cols-wrap">
                             <div class="banner-cols-title">热门服务</div>
                             <ul>
@@ -48,13 +50,15 @@
             <swiper-slide>
                 <div class="swiper-item-wrap swiper-2 t-scr-wrap">
                     <div class="banner-wrap p-wrap">
-                        <div class="banner-ad2 t-active" @click="$router.push({path:'/help'})"></div>
+                        <div class="banner-ad2 t-active"
+                             @click="$router.push({path:'/help?cid=5&aid=48'})"></div>
                     </div>
                 </div>
             </swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
+            <div class="swiper-pagination"
+                 slot="pagination"></div>
         </swiper>
-                
+
         <!-- 4优势 -->
         <div class="t-scr-wrap">
             <div class="banner-advantage p-wrap">
@@ -81,7 +85,11 @@
         <!-- 费率 -->
         <div class="t-scr-wrap bgf2f2f5">
             <div class="expenses-wrap p-wrap">
-                <div class="expenses-title">佣金资费 · 融资利率</div>
+                <div class="expenses-title">
+                    <div class="expenses-tit">佣金资费 · 融资利率</div>
+                    <div class="expenses-more"
+                         @click="$router.push({path:'/help?cid=5&aid=48'})">查看更多 ></div>
+                </div>
                 <ul class="clearfix">
                     <!-- 美股 -->
                     <li>
@@ -226,17 +234,24 @@
                 </ul>
             </div>
         </div>
-        <!-- banner 全能 -->
-        <div class="t-src-wrap">
-            <div class="banner-acount p-wrap"></div>
-        </div>
         <!-- banner 安全 -->
         <div class="t-src-wrap bgf2f2f5">
-            <div class="banner-safe p-wrap"></div>
+            <div class="banner-safe p-wrap">
+                <div class="k-btn more"
+                     @click="$router.push({path:'/help'})">查看更多信息</div>
+            </div>
+        </div>
+        <!-- banner 全能 -->
+        <div class="t-src-wrap">
+            <div class="banner-acount p-wrap">
+                <div class="k-btn more"
+                     @click="$router.push({path:'/help'})">查看更多信息</div>
+            </div>
         </div>
         <!-- banner 入门 -->
         <div class="t-src-wrap bg11131b">
-            <div class="banner-primer p-wrap"></div>
+            <div class="banner-primer p-wrap k-active"
+                 @click="$router.push({path:'/developing'})"></div>
         </div>
         <!-- footer -->
         <footerbar />
@@ -246,7 +261,7 @@
 <script>
 import headerbar from '@/components/headerbar'
 import footerbar from '@/components/footerbar'
-import { Swiper, SwiperSlide, directive, Autoplay  } from 'vue-awesome-swiper'
+import { Swiper, SwiperSlide, directive, Autoplay } from 'vue-awesome-swiper'
 // import style (>= Swiper 6.x)
 // import 'swiper/swiper-bundle.css'
 // import style (<= Swiper 5.x)
@@ -258,27 +273,27 @@ export default {
         Swiper,
         SwiperSlide,
     },
-     data() {
-      return {
-        swiperOptions: {
-        　　observer:true,//修改swiper自己或子元素时，自动初始化swiper 
-        　　observeParents:true,//修改swiper的父元素时，自动初始化swiper 
-        　　loop:true,
-    　　    autoplay: {
-                disableOnInteraction: false,
-                delay: 3000
-            },
-            pagination: {
-                el: '.swiper-pagination'
-            },
-            // Some Swiper option/callback...
+    data () {
+        return {
+            swiperOptions: {
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper 
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper 
+                loop: true,
+                autoplay: {
+                    disableOnInteraction: false,
+                    delay: 3000
+                },
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                // Some Swiper option/callback...
+            }
         }
-      }
     },
-        computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
+    computed: {
+        swiper () {
+            return this.$refs.mySwiper.$swiper
+        }
     },
     methods: {
         onSwiper (swiper) {
@@ -460,13 +475,26 @@ export default {
         box-sizing: border-box;
         height: 830px;
         .expenses-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
             padding: 0 53px;
             box-sizing: border-box;
             height: 38px;
-            line-height: 38px;
-            font-size: 36px;
-            color: #313131;
-            font-weight: 700;
+            .expenses-tit {
+                flex: 1;
+                height: 38px;
+                line-height: 38px;
+                font-size: 36px;
+                color: #313131;
+                font-weight: 700;
+            }
+            .expenses-more {
+                height: 34rpx;
+                line-height: 34rpx;
+                font-size: 32rpx;
+                cursor: pointer;
+            }
         }
         ul {
             margin: calc(40px - 53px) 0 0 -53px;
@@ -545,20 +573,33 @@ export default {
         }
     }
     .banner-acount {
+        position: relative;
         background: url(~@/assets/images/banner-global-computer.jpg) no-repeat
             center;
         background-size: 1120px 329px;
         height: 518px;
+        .k-btn {
+            position: absolute;
+            left: 96px;
+            bottom: 160px;
+        }
     }
     .banner-safe {
+        position: relative;
         background: url(~@/assets/images/banner-safe.jpg) no-repeat center;
         background-size: 1120px 471px;
         height: 518px;
+        .k-btn {
+            position: absolute;
+            right: 324px;
+            bottom: 80px;
+        }
     }
     .banner-primer {
         background: url(~@/assets/images/banner-primer.jpg) no-repeat center;
         background-size: 1120px 586px;
         height: 586px;
+        cursor: pointer;
     }
     .bgf2f2f5 {
         background: #f2f2f5;

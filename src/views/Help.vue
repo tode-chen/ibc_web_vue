@@ -4,7 +4,7 @@
             <headerbar col="help" />
         </div>
         <div class="breadcrumbWrap">
-            <div class="breadcrumb">
+            <div class="_breadcrumb">
                 帮助中心
             </div>
         </div>
@@ -169,14 +169,14 @@ export default {
 #help {
     .breadcrumbWrap {
         width: 100%;
-        font-size: 12px;
-        line-height: 16px;
         background: #f9f9f9;
-        .breadcrumb {
+        ._breadcrumb {
             margin: 0 auto;
             width: 1120px;
             height: 64px;
             line-height: 64px;
+            font-size: 16px;
+            background: #f9f9f9;
         }
     }
     .mainWrap {
@@ -209,7 +209,6 @@ export default {
                         color: #555;
                         line-height: 16px;
                         display: inline-block;
-                        white-space: nowrap;
                         overflow: hidden;
                         &.act {
                             color: $t-color-primary;
